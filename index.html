@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Календарь событий</title>
+	<link rel="stylesheet" href="css/eventCalendar.css">
+	<link rel="stylesheet" href="css/eventCalendar_theme_responsive.css">
+</head>
+<body>
+	<div id="eventCalendar" style="width: 300px; margin: 50px auto;"></div>
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/jquery.eventCalendar.js"></script>
+	<script src="createEvent.js"></script>
+</body>
+<script>
+	$(function(){
+			$('#eventCalendar').eventCalendar({
+				jsonData: localStorage,
+				eventsjson: 'data.json',
+				jsonDateFormat: 'human',
+				startWeekOnMonday: false,
+				openEventInNewWindow: true,
+				dateFormat: 'DD-MM-YYYY',
+				showDescription: false,
+				locales: {
+					locale: "ru",
+					txt_noEvents: "Нет запланированных событий",
+					txt_SpecificEvents_prev: "",
+					txt_SpecificEvents_after: "события:",
+					txt_NextEvents: "Следующие события:",
+					txt_Button: "Добавить событие",
+					moment: {
+						"months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+						"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+						"monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+						"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+						"weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
+						"Пятница","Суббота" ],
+						"weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
+						"Пт","Сб" ],
+						"weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
+						"Пт","Сб" ]
+					}
+				}
+			});
+		});
+</script>
+</html>
