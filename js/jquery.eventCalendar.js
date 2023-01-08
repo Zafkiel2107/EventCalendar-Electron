@@ -1,14 +1,3 @@
-/* =
-    jquery.eventCalendar.js
-    version: 0.7
-    date: 13-08-2015
-    author:
-        Jaime Fernandez (@vissit)
-    company:
-        Paradigma Tecnologico (@paradigmate)
-    url:
-   		http://www.vissit.com/projects/eventCalendar/
-*/
 ;(function( $ ) {
 	$.fn.eventCalendar = function(options){
 		var calendar = this;
